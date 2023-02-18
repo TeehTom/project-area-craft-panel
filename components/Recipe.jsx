@@ -40,7 +40,9 @@ const Recipe = props => {
     const onChangeResult = useCallback(value => setResult(prev => ({ ...prev, ...value })), [ setResult ]);
 
     const onClickExport = useCallback(() => {
-        onExport(ingredientFirst, ingredientSecond, result);
+        /**
+         * EXPORT RECIPE
+         */
     }, [ ingredientFirst, ingredientSecond, result ]);
 
     return (
