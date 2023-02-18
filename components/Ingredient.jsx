@@ -27,14 +27,8 @@ const Ingredient = props => {
 
     const onChange = useCallback(({ target, value }) => {
         const parameter = target?.dataset?.parameter;
-
-        console.log(value);
-        console.log(parameter);
-
         onChangeIngredient({ [ parameter ]: value });
     }, [ onChangeIngredient ]);
-
-    console.log(ingredient);
 
     return (
         <div className='pa-ingredient'>
@@ -49,7 +43,6 @@ const Ingredient = props => {
                     )
                 })
             }
-
         </div>
     )
 };

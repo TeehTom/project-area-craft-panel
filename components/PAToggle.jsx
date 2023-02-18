@@ -12,9 +12,6 @@ const PAToggle = React.forwardRef((props, ref) => {
     } = props;
 
     const onToggle = useCallback(e => {
-
-        console.log(e.target.checked);
-
         onChange({
             event: e,
             target: e.target,
