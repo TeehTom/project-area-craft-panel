@@ -1,0 +1,35 @@
+.pa-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 34px;
+    height: 34px;
+    margin: 0;
+    border: 0;
+    border-radius: 6px;
+    color: inherit;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+    transition: color .2s, background-color .2s;
+    background-color: #444a56;
+    padding: 10px;
+    transition: background-color .2s;
+    flex-direction: row;
+}
+
+.pa-button:active {
+    background-color: #444a5669;
+}
+
+.pa-button.minus {
+    background-color: #993629;
+}
+
+.pa-button.minus:active {
+    background-color: #33210e;
+}

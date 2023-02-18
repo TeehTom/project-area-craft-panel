@@ -1,0 +1,83 @@
+.pa-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+}
+.pa-recipe-title > span {
+    font-size: 5em;
+    font-style: oblique 8deg;
+    font-family: monospace;
+}
+
+.pa-recipe-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.pa-recipe-export > .pa-button {
+    width: 300px;
+    height: 50px;
+    background-color: #0a5e3d;
+}
+.pa-recipe-export > .pa-button:active {
+    background-color: #073a26;
+}
+
+.pa-parameter:has(> [data-parameter='classnames']) {
+    align-items: flex-start;
+}
+
+.pa-parameter {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+.pa-ingredient {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background-color: #272b35;
+    border-radius: 5px;
+}
+
+.pa-ingredient-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.pa-ingredient-wrapper > span {
+    font-size: 1.3em;
+}
+
+.pa-ingredient-wrapper.plus > span {
+    font-size: 2em;
+}
+.pa-ingredient-wrapper.plus {
+    align-self: center;
+}
+
+
+.pa-multiple {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.pa-multiple-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}

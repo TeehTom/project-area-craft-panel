@@ -1,0 +1,33 @@
+.pa-input {
+    position: relative;
+    display: flex;
+    height: 34px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #535a69;
+    box-shadow: none;
+    transition: border-color .2s, background-color .2s;
+}
+
+.pa-input:focus-within {
+    border-color: #7facff;
+    background-color: #272b35;
+    box-shadow: none;
+    transition: border-color .2s, background-color .2s, box-shadow .3s ease-out;
+}
+
+.pa-input > input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0 10px;
+    border-radius: inherit;
+    color: white;
+    font: inherit;
+    cursor: inherit;
+    background: none;
+}
+

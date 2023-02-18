@@ -1,0 +1,59 @@
+.pa-toggle {
+    display: flex;
+    width: fit-content;
+    font-size: .875rem;
+    margin: 0;
+    position: relative;
+    border-radius: 999px;
+    box-shadow: none;
+    gap: 10px;
+}
+
+.pa-toggle > input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.pa-toggle > .pa-toggle-btn {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    color: #535a69;
+    border: 2px solid;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: .2s;
+    transition-property: color, background-color;
+}
+
+.pa-toggle.pa-toggle-true > .pa-toggle-btn {
+    background-color: #286ceb;
+    border-color: #286ceb;
+}
+
+
+.pa-toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    border-radius: 50%;
+    background-color: currentColor;
+    transition: inherit;
+    transition-property: left, margin-left, background-color;
+}
+
+.pa-toggle-true .pa-toggle-btn::before {
+    left: 100%;
+    margin-left: -14px;
+    background-color: #272b35;
+}
