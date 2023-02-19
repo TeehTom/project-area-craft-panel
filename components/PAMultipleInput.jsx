@@ -63,7 +63,7 @@ const PAMultipleInput = React.forwardRef((props, ref) => {
     return (
         <div className='pa-multiple' ref={multipleInputRef} {...otherProps}>
             {values.map((v, i) => (
-                <div className='pa-multiple-input'>
+                <div className='pa-multiple-input' key={i}>
                     <PAInput value={v} onChange={onChangeValues} data-index={i} />
                     {i > 0 && <PAButton onClick={onClickRemove} data-index={i} className='minus'>-</PAButton>}
                     {i === 0 && <PAButton onClick={onClickAdd}>+</PAButton>}

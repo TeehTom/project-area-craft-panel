@@ -34,7 +34,7 @@ const Result = props => {
                 result && Object.keys(result).map(param => {
                     const Component = TYPE_PER_PARAMETER[ param ];
                     return (
-                        <div className='pa-parameter'>
+                        <div className='pa-parameter' key={param}>
                             <span>{param}</span>
                             <Component value={result?.[ param ]} onChange={onChange} data-parameter={param} />
                         </div>

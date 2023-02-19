@@ -23,7 +23,7 @@ const PAToggle = React.forwardRef((props, ref) => {
     return (
         <div className={classnames('pa-toggle', { 'pa-toggle-true': value })}>
             <input {...otherProps} type='checkbox' checked={value} onChange={onToggle} ref={ref} />
-            <div class="pa-toggle-btn"></div>
+            <div className="pa-toggle-btn"></div>
             <span className='pa-toggle-text'>{texts[ +value ]}</span>
         </div>
     );
