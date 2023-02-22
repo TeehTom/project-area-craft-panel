@@ -4,10 +4,34 @@
     align-items: center;
     gap: 34px;
 }
+
 .pa-recipe-title > span {
     font-size: 5em;
     font-style: oblique 8deg;
     font-family: monospace;
+}
+
+.pa-recipe-information {
+    display: flex;
+    flex-direction: column;
+    background-color: #272b35;
+    border-radius: 5px;
+    align-items: center;
+    padding: 15px;
+    gap: 11px;
+}
+
+.pa-recipe-information > span {
+    font-size: 1.2em;
+}
+
+.pa-recipe-information-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 16px;
+    padding: 5px;
 }
 
 .pa-recipe-wrapper {
@@ -22,6 +46,7 @@
     height: 50px;
     background-color: #0a5e3d;
 }
+
 .pa-recipe-export > .pa-button:active {
     background-color: #073a26;
 }
@@ -80,4 +105,52 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+}
+
+.pa-recipe-file-wrapper {
+    width: 50%;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #292d36;
+    position: relative;
+}
+
+.pa-recipe-file {
+    overflow: auto;
+    white-space: pre;
+    padding: 10px;
+    color: #ababab;
+    font-weight: 400;
+    font-family: system-ui;
+    margin: 0;
+}
+
+.pa-recipe-copy {
+    position: absolute;
+    background-color: #0a5e3d;
+    border-top-right-radius: 6px;
+    top: 0;
+    right: 0;
+    gap: 6px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #363b44;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
