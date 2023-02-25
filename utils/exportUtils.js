@@ -9,7 +9,7 @@ export function BuildFile(ingredientFirst, ingredientSecond, result, craftClass,
 \t\tm_Specialty = 0;                                 // value > 0 for roughness, value < 0 for precision\r
 \t\t\r
 \t\t//ingredient 1\r
-\t\t${ingredientFirst?.classnames.map((classname, index, classnames) => `InsertIngredient(0,"${classname}");${index < (classnames.length - 1) ? '\n' : ''}`).join('\t\t')}
+\t\t${ingredientFirst?.classnames.filter(Boolean).map((classname, index, classnames) => `InsertIngredient(0,"${classname}");${index < (classnames.length - 1) ? '\n' : ''}`).join('\t\t')}
 \t\t\r
 \t\tm_MinDamageIngredient[0] = ${ingredientFirst?.m_MinDamageIngredient};                   // -1 = disable check\r
 \t\tm_MaxDamageIngredient[0] = ${ingredientFirst?.m_MaxDamageIngredient};                   // -1 = disable check\r
@@ -25,7 +25,7 @@ export function BuildFile(ingredientFirst, ingredientSecond, result, craftClass,
 \t\t\r
 \t\t//ingredient 2\r
 \t\t// you can insert multiple ingredients this way\r
-\t\t${ingredientSecond?.classnames.map((classname, index, classnames) => `InsertIngredient(1,"${classname}");${index < (classnames.length - 1) ? '\n' : ''}`).join('\t\t')}
+\t\t${ingredientSecond?.classnames.filter(Boolean).map((classname, index, classnames) => `InsertIngredient(1,"${classname}");${index < (classnames.length - 1) ? '\n' : ''}`).join('\t\t')}
 \t\t\r
 \t\tm_MinDamageIngredient[1] = ${ingredientSecond?.m_MinDamageIngredient};                   // -1 = disable check\r
 \t\tm_MaxDamageIngredient[1] = ${ingredientSecond?.m_MaxDamageIngredient};                   // -1 = disable check\r
