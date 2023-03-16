@@ -44,6 +44,27 @@ const PAMultipleInput = React.forwardRef((props, ref) => {
         }
     }, [ values, onChange, multipleInputRef ]);
 
+    const onPaste = useCallback(event => {
+        const { target, clipboardData } = event;
+        const index = target?.dataset?.index;
+        const current = multipleInputRef?.current;
+
+        if(current && index) {
+            const valueInputSplit = (clipboardData || window.clipboardData).getData("text").replace(/[\r\n]+/gm, ' ').split(' ');
+            let valuesTemps = [ ...values ];
+
+            if (valueInputSplit.length > 1) {
+                const deleted = valuesTemps.splice(index, 0, ...valueInputSplit);
+                onChange({
+                    event,
+                    target: multipleInputRef?.current,
+                    value: valuesTemps,
+                    prevValue: values,
+                });
+                event.preventDefault();
+            }
+        }
+    }, [ values, onChange, multipleInputRef ]);
 
     const onClickRemove = useCallback(event => {
         const index = event.target?.dataset?.index;
@@ -64,7 +85,7 @@ const PAMultipleInput = React.forwardRef((props, ref) => {
         <div className='pa-multiple' ref={multipleInputRef} {...otherProps}>
             {values.map((v, i) => (
                 <div className='pa-multiple-input' key={i}>
-                    <PAInput value={v} onChange={onChangeValues} data-index={i} />
+                    <PAInput value={v} onChange={onChangeValues} data-index={i} onPaste={onPaste} />
                     {i > 0 && <PAButton onClick={onClickRemove} data-index={i} className='minus'>-</PAButton>}
                     {i === 0 && <PAButton onClick={onClickAdd}>+</PAButton>}
                 </div>

@@ -127,15 +127,9 @@ const Recipe = props => {
                     <span>Ingredient 1</span>
                     <Ingredient ingredient={ingredientFirst} onChangeIngredient={onChangeIngredientFirst} />
                 </div>
-                <div className='pa-ingredient-wrapper plus'>
-                    <span>+</span>
-                </div>
                 <div className='pa-ingredient-wrapper'>
                     <span>Ingredient 2</span>
                     <Ingredient ingredient={ingredientSecond} onChangeIngredient={onChangeIngredientSecond} />
-                </div>
-                <div className='pa-ingredient-wrapper plus'>
-                    <span>=</span>
                 </div>
                 <div className='pa-ingredient-wrapper'>
                     <span>Result</span>
