@@ -54,11 +54,11 @@ const PAMultipleInput = React.forwardRef((props, ref) => {
             let valuesTemps = [ ...values ];
 
             if (valueInputSplit.length > 1) {
-                const deleted = valuesTemps.splice(index, 0, ...valueInputSplit);
+                valuesTemps.splice(index, 0, ...valueInputSplit);
                 onChange({
                     event,
                     target: multipleInputRef?.current,
-                    value: valuesTemps,
+                    value: valuesTemps.filter(Boolean),
                     prevValue: values,
                 });
                 event.preventDefault();
