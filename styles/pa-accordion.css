@@ -1,0 +1,45 @@
+.pa-accordion-title {
+    width: 100%;
+    display: flex;
+    background: none;
+    border: none;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 60px;
+    align-items: center;
+    font-size: 21px;
+    border-bottom: 3px solid #363b44;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 0 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pa-accordion-title > .pa-accordion-title-right > svg {
+    transition: transform 0.25s;
+}
+
+.pa-accordion.close > .pa-accordion-title > .pa-accordion-title-right > svg {
+    transform: rotate(180deg);
+}
+
+.pa-accordion-content {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.pa-accordion.open > .pa-accordion-content {
+    max-height: inherit;
+}
+
+.pa-accordion.close > .pa-accordion-content {
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.pa-accordion-title-right {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}

@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import classnames from 'classnames';
 import isEqual from 'react-fast-compare';
 
 const defaultProps = {
@@ -10,6 +11,8 @@ const PAInput = React.forwardRef((props, ref) => {
         value,
         onChange,
         type,
+        invalid,
+        className,
         ...otherProps
     } = props;
 
@@ -20,11 +23,14 @@ const PAInput = React.forwardRef((props, ref) => {
             value: event.target.value,
             prevValue: value,
         });
-    }, [ onChange ]);
+    }, [ onChange, value ]);
 
     return (
-        <div className='pa-input'>
-            <input {...otherProps} type={type} value={value} onChange={onChangeInput} ref={ref} />
+        <div className={classnames('pa-input-wrapper', className)}>
+            <div className={classnames('pa-input', { invalid: Boolean(invalid)})}>
+                <input {...otherProps} type={type} value={value} onChange={onChangeInput} ref={ref} />
+            </div>
+            {invalid && <span className='pa-input-invalid'>{invalid}</span>}
         </div>
     );
 });

@@ -1,0 +1,161 @@
+.home-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-trader-wrapper {
+    width: fit-content;
+    min-width: 375px;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #272b35;
+}
+
+
+.home-trader-actions-wrapper {
+    width: 100%;
+    align-self: center;
+    border-bottom: 2px solid #272b35;
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.home-trader-wrapper > .home-trader-actions-wrapper >span {
+    font-size: larger;
+}
+
+.home-trader-options {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.home-trader-options::-webkit-scrollbar {
+    display: none;
+}
+
+.home-trader-options .home-trader-option-edit {
+    width: 100%;
+}
+
+.home-trader-option {
+    display: flex;
+    line-height: 26px;
+    min-height: 60px;
+    background-color: #1f2530;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+    gap: 13px;
+    justify-content: space-between;
+}
+
+.home-trader-options .pa-button:has([data-icon="check"]) {
+    background-color: #0a5e3d;
+}
+
+.home-trader-options .pa-button:has([data-icon="pen-to-square"]) {
+    background-color: #405f97;
+}
+
+.home-trader-options .pa-button:has([data-icon="trash"]) {
+    background-color: #993629;
+}
+
+.home-trader-options.isEditing > .home-trader-option {
+    cursor: inherit;
+}
+
+.home-trader-option.selected {
+    background-color: #272b35;
+}
+
+.home-trader-option:hover {
+    background-color: #272b35;
+}
+
+.home-trader-actions-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.home-trader-actions-btn .pa-button:has([data-icon="plus"]) {
+    background-color: #0a5e3d;
+}
+
+.home-trader-actions-btn .pa-button:has([data-icon="file-import"]) {
+    background-color: #892d21;
+}
+
+.home-trader-actions-btn .pa-button:has([data-icon="file-export"]) {
+    background-color: #76760f;
+}
+
+.home-trader-option-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+}
+
+.home-import-file {
+    gap: 13px;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-import-btn {
+    width: 200px;
+    height: 200px;
+    background-color: inherit;
+    border: 8px dashed #3b4860;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.home-import-btn:hover {
+    border-color: #64779b;
+}
+
+.home-import-btn:hover > svg > * {
+    fill: #405f97;
+}
+
+.home-import-btn > svg {
+    width: 100px;
+    height: auto;
+}
+
+.home-import-btn > svg > * {
+    fill: #415983;
+}
+
+.home-import-title {
+    font-size: 32px;
+}
+
+.home-choose-btn {
+    width: 200px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-choose-btn > svg {
+    width: 100px;
+    height: auto;
+}

@@ -99,8 +99,14 @@ a {
   text-decoration: none;
 }
 
+svg {
+    width: 17px;
+    height: 17px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+

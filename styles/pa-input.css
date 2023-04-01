@@ -31,3 +31,17 @@
     background: none;
 }
 
+.pa-input.invalid,
+.pa-input.invalid > input {
+    background-color: #a74d41;
+}
+
+.pa-input.invalid {
+    border-color: #a74d41;
+}
+
+span.pa-input-invalid {
+    font-style: italic;
+    font-size: small;
+    color: #ffa69a;
+}

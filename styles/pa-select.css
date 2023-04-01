@@ -1,0 +1,58 @@
+.pa-select {
+    position: relative;
+}
+
+.pa-select-btn {
+    width: 100%;
+    height: 34px;
+    background-color: #535a69;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pa-select.open > .pa-select-btn {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border: 2px solid #2b2f38;
+    border-bottom: none;
+}
+.pa-select.open > .pa-select-options {
+    border: 2px solid #2b2f38;
+    border-top: none;
+}
+.pa-select-options {
+    position: absolute;
+    width: 100%;
+    background-color: #535a69;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    z-index: 1;
+}
+
+.pa-select-option {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 6px;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pa-select-option.selected {
+    font-weight: bolder;
+    pointer-events: bounding-box;
+    cursor: no-drop;
+}
+
+.pa-select-option:hover {
+    background-color: #444a56;
+}
+
+.pa-select-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}

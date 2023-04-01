@@ -4,7 +4,9 @@
     justify-content: center;
     width: fit-content;
     min-width: 34px;
-    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    height: auto;
     margin: 0;
     border: 0;
     border-radius: 6px;
@@ -20,6 +22,7 @@
     padding: 10px;
     transition: background-color .2s;
     flex-direction: row;
+    user-select: none;
 }
 
 .pa-button:active {
@@ -32,4 +35,12 @@
 
 .pa-button.minus:active {
     background-color: #33210e;
+}
+
+.pa-button.invalid {
+    background: #a74d41;
+}
+
+.pa-button > * {
+    pointer-events: none;
 }

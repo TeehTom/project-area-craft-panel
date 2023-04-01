@@ -7,11 +7,12 @@ const PAButton = React.forwardRef((props, ref) => {
             onClick,
             className,
             children,
+            invalid,
             ...otherProps
         } = props;
 
     return (
-        <button {...otherProps} className={classnames('pa-button', className)} onClick={onClick}>
+        <button {...otherProps} className={classnames('pa-button', className, { invalid })} onClick={onClick}>
             {children}
         </button>
     );

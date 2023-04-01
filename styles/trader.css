@@ -1,0 +1,133 @@
+#trader-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    flex: 1;
+}
+
+#trader-wrapper p {
+    margin: 0;
+}
+
+.trader-title {
+    font-size: xxx-large;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#add-category-wrapper {
+    padding: 13px;
+    background-color: #252a36;
+    border-radius: 6px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 13px;
+    width: 300px;
+
+}
+
+.trader-categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trader-btn-add-category,
+#add-category-wrapper > hr {
+    width: 100%;
+}
+
+.category-action-btn {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add-category-title {
+    font-size: larger;
+}
+
+.category-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 13px 13px 0 13px;
+}
+
+.category-title > span {
+    text-align: center;
+    flex: 1;
+}
+.category-title > span.icon-btn {
+    width: 34px;
+    flex: inherit;
+}
+
+#item-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+#item-wrapper > .item {
+    flex: 1;
+}
+
+.category-body {
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+}
+
+#category-wrapper {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.trader-categories-title {
+    border-bottom: 2px solid #363b44;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 21px;
+}
+
+.trader-categories-title > span {
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+.trader-categories-title-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
+    padding-right: 30px;
+}
+
+.trader-categories-title-btn > .pa-button {
+    gap: 6px;
+}
+
+.category-name-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+}
+
+.category-name-wrapper .pa-button:has([data-icon="pen-to-square"]){
+    background-color: #405f97;
+}
+
+.category-name-wrapper .pa-button:has([data-icon="check"]){
+    background-color: #0a5e3d;
+}
+
+#category-wrapper.isEditing > .pa-accordion .pa-accordion-title {
+    cursor: inherit;
+    min-height: 63px;
+}
