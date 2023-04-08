@@ -7,6 +7,7 @@ import '@/styles/pa-accordion.css'
 import '@/styles/pa-select.css'
 import '@/styles/home.css'
 import '@/styles/trader.css'
+import '@/styles/weapons.css'
 
 
 export default function App({ Component, pageProps }) {

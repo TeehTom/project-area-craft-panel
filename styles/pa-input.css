@@ -31,6 +31,16 @@
     background: none;
 }
 
+.pa-input > input::placeholder {
+    font-family: system-ui;
+    font-style: italic;
+    color: #979494;
+}
+
+.pa-input:focus-within > input::placeholder {
+    color: #8d8d8d;
+}
+
 .pa-input.invalid,
 .pa-input.invalid > input {
     background-color: #a74d41;
