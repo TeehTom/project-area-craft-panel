@@ -4,10 +4,15 @@ import classnames from 'classnames';
 
 const texts = [ 'false', 'true' ];
 
+const defaultProps = {
+    showText: true
+}
+
 const PAToggle = React.forwardRef((props, ref) => {
     const {
         value,
         onChange,
+        showText,
         ...otherProps
     } = props;
 
@@ -24,11 +29,12 @@ const PAToggle = React.forwardRef((props, ref) => {
         <div className={classnames('pa-toggle', { 'pa-toggle-true': value })}>
             <input {...otherProps} type='checkbox' checked={value} onChange={onToggle} ref={ref} />
             <div className="pa-toggle-btn"></div>
-            <span className='pa-toggle-text'>{texts[ +value ]}</span>
+            {showText && <span className='pa-toggle-text'>{texts[ +value ]}</span>}
         </div>
     );
 });
 
 PAToggle.displayName = 'PAToggle';
+PAToggle.defaultProps = defaultProps;
 
 export default React.memo(PAToggle, isEqual);

@@ -16,7 +16,7 @@ const Attachments = ({ attachments }) => {
             <div className='attachments'>
                 {
                     data.map(attach => (
-                        <div className='attachment'>
+                        <div className='attachment' key={attach?.class}>
                             <span>Nom de l'accessoire: <b>{attach?.displayName}</b></span>
                             <span>Classname: <b>{attach?.class}</b></span>
                         </div>

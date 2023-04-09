@@ -18,7 +18,10 @@ export default function Home() {
             </Head>
             <main className={styles.main}>
                 <WeaponProvider>
-                    <FindWeapon/>
+                    <div className='wrapper'>
+                        <span className='title'>WEAPON FINDER 9000</span>
+                        <FindWeapon/>
+                    </div>
                 </WeaponProvider>
             </main>
         </>
