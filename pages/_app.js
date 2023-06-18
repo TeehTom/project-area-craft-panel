@@ -9,7 +9,6 @@ import '@/styles/pa-spinner.css'
 import '@/styles/home.css'
 import '@/styles/trader.css'
 import '@/styles/weapons.css'
-import '@/styles/mapStalker.css'
 
 
 export default function App({ Component, pageProps }) {
