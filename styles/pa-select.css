@@ -3,7 +3,7 @@
 }
 
 .pa-select-btn {
-    width: 100%;
+    min-width: 120px;
     height: 34px;
     background-color: #535a69;
     border: none;
@@ -24,7 +24,7 @@
 }
 .pa-select-options {
     position: absolute;
-    width: 100%;
+    min-width: 120px;
     background-color: #535a69;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -34,8 +34,10 @@
 .pa-select-option {
     display: flex;
     align-items: center;
+    white-space: pre;
+    min-width: 120px;
     height: 34px;
-    padding: 0 6px;
+    padding: 0 10px;
     font-size: 16px;
     cursor: pointer;
     user-select: none;

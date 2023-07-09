@@ -51,7 +51,7 @@ const PASelect = React.forwardRef((props, ref) => {
                     className='pa-select-btn'
                     onClick={onClick}
                 >
-                    {options.find(option => custom ? custom && option.custom : option?.value === value )?.name}
+                    {options?.find(option => custom ? custom && option.custom : option?.value === value )?.name}
                 </button>
                 <div className='pa-select-options'>
                     {
@@ -67,9 +67,7 @@ const PASelect = React.forwardRef((props, ref) => {
                         ))
                     }
                 </div>
-                <div>
-                    {custom && customComponent}
-                </div>
+                {Boolean(custom) && <div>{customComponent}</div>}
             </div>
         </div>
     );

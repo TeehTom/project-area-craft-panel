@@ -136,3 +136,20 @@
     font-size: larger;
     font-weight: 400;
 }
+
+
+.weapon-container {
+    position: relative;
+}
+
+.weapon-copy {
+    background-color: #0a5e3d;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+.weapon-copy:active {
+    background-color: #205122;
+}
