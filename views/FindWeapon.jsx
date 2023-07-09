@@ -40,7 +40,7 @@ const FindWeapon = props => {
     const [ showAmmunitions, setShowAmmunitions ] = useState(() => defaultValueFilter('weapons.showAmmunitions', true, { parse: true }));
     const [ showMagazines, setShowMagazines ] = useState(() => defaultValueFilter('weapons.showMagazines', true, { parse: true }));
     const [ showAttachments, setShowAttachments ] = useState(() => defaultValueFilter('weapons.showAttachments', true, { parse: true }));
-    const [ typeExport, setTypeExport ] = useState(() => defaultValueFilter('weapons.typeExport', EXPORT_TYPES?.JSON?.value));
+    const [ typeExport, setTypeExport ] = useState(() => defaultValueFilter('weapons.typeExport', 'JSON'));
 
     const [ showFilter, setShowFilter ] = useState(false);
     const [ copied, setCopied ] = useState('');
@@ -59,7 +59,6 @@ const FindWeapon = props => {
         if (weaponClass) {
             setCopied(weaponClass);
             const weapon = weaponSearched?.find(({ class: wClass }) => wClass === weaponClass);
-            console.log(weapon, weaponClass);
             const toClipBoard = {};
 
             if (weapon) {
