@@ -44,6 +44,7 @@
     background-color: #444750;
     border-radius: 6px;
     padding: 13px;
+    height: 100%;
 }
 
 .weapon > span {
@@ -82,6 +83,10 @@
 }
 .title-category {
     font-size: 21px;
+}
+
+.objects .title-category {
+    font-size: 15px;
 }
 
 .filter-search {
@@ -152,4 +157,12 @@
 
 .weapon-copy:active {
     background-color: #205122;
+}
+
+.objects .weapon-copy {
+    display: none;
+}
+
+.objects .weapon-container:hover .weapon-copy {
+    display: block;
 }
