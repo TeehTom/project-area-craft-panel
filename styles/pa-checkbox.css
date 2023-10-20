@@ -1,0 +1,25 @@
+.PAcheckbox-wrapper {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #444750;
+    border: 2px solid #535a69;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: none;
+   transition: box-shadow .3s ease-out;
+}
+
+.PAcheckbox-wrapper.checked {
+    box-shadow: 0px 0px 8px 2px #00000026;
+}
+
+.PAcheckbox {
+    display: none;
+}
+
+.PAcheckbox-wrapper > [data-icon="check"] {
+    color: lightgrey;
+}

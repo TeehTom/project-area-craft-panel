@@ -142,9 +142,8 @@
     font-weight: 400;
 }
 
-
-.weapon-container {
-    position: relative;
+.objects .search-container {
+    flex-direction: row;
 }
 
 .weapon-copy {
@@ -155,14 +154,31 @@
     margin: 10px;
 }
 
+.weapon-container {
+    position: relative;
+}
+
+.objects .item-copy {
+    gap: 10px;
+    width: 110px;
+    background-color: #0a5e3d;
+}
+
+.item-copy:active,
 .weapon-copy:active {
     background-color: #205122;
 }
 
-.objects .weapon-copy {
-    display: none;
+.weapon-checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
 }
 
-.objects .weapon-container:hover .weapon-copy {
-    display: block;
+.weapon-divider {
+    width: 100%;
+    height: 2px;
+    background: #444750;
 }
