@@ -1,0 +1,139 @@
+.validatorjson {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fileZone-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fileZone-error {
+    color: #a73a32;
+    font-weight: 600;
+}
+
+.fileZone {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 9px dashed #818181;
+    border-radius: 21px;
+    margin: auto;
+    padding: 13px;
+    flex-direction: column;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inputFileHidden {
+    display: none;
+}
+
+.fileZone > svg {
+    width: 50%;
+    height: 50%;
+}
+
+.fileZone > svg > path,
+.fileZone-text {
+    color: #818181;
+    transition: color 0.3s ease;
+}
+
+.fileZone-text {
+    text-align: center;
+    font-size: smaller;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fileZone:hover,
+.fileZone.hover {
+    border-color: #4d6392;
+    background: #252d3e;
+}
+
+.fileZone:hover > svg > path,
+.fileZone.hover > svg > path,
+.fileZone:hover > .fileZone-text,
+.fileZone.hover > .fileZone-text {
+    color: #768cbc;
+}
+
+.fileZone-text.uploaded {
+    font-size: 16px;
+}
+
+.filezone-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.filezone-check {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.filezone-check-text {
+    color: #d5d5d5;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.divider {
+    height: 2px;
+    background: #333333;
+    width: 50%;
+    align-self: center;
+    border-radius: 50%;
+    margin: 13px 0;
+}
+
+.divider[width] {
+    width: calc(100% - 10px);
+}
+
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(45px, auto);
+}
+
+.file.error {
+    color: #d80000;
+    font-weight: bold;
+}
+
+.file {
+    color: #4caf50;
+    font-weight: 600;
+    padding: 10px;
+    border: 2px solid #818181;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+.file-list-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.file-error {
+    color: #d7d7d7;
+}
