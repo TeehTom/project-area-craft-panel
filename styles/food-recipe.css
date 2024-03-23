@@ -1,0 +1,77 @@
+.foodRecipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.foodRecipe-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+}
+
+.foodRecipe-wrapper > span {
+    font-size: xx-large;
+}
+
+.foodRecipe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.foodRecipe:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    right: -11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #535a69;
+    border-radius: 25px;
+    height: calc(100% + 10px);
+}
+
+.foodRecipe:nth-last-child(-n+2)::after {
+    height: 100%;
+}
+
+.foodRecipe-label {
+    font-size: larger;
+    cursor: pointer;
+    user-select: none;
+}
+
+.foodRecipe-container {
+    background-color: #272b35;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+}
+
+.foodRecipe-container.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.foodRecipe-container.grip {
+    display: grid;
+    grid-gap: 10px 21px;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.foodRecipe-input {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 21px;
+}

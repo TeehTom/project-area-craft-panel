@@ -11,6 +11,7 @@ import '@/styles/home.css'
 import '@/styles/trader.css'
 import '@/styles/weapons.css'
 import '@/styles/jsonvalidator.css'
+import '@/styles/food-recipe.css'
 
 
 export default function App({ Component, pageProps }) {
